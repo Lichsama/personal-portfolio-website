@@ -293,31 +293,30 @@ form .btn2{
     font-weight: 300;
     margin-top: 20;
 }
-
 nav .fa-solid{
     display: none;
-    
 }
+
 @media only screen and (max-width:600px){
     #header{
         background-image: url(images/arkaplanphone.jpg);
     }
     .header-text{
         margin-top: 100%;
-        margin: 500px 0;
+        margin: 400px 0;
         font-size: 60px;
         color: #fff;
         -webkit-text-stroke-color: #000000;
-    -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-width: 1px;
     
     }
     .header-text h1{
         font-size:40px;
         color: #fff;
     }
-    nav.fas{
+    nav .fa-solid{
         display: block;
-        font-size:25px;
+        font-size:35px;
     }
     nav ul{
         background: #d29a41;
@@ -327,7 +326,7 @@ nav .fa-solid{
         width: 200px;
         height: 100vh;
         padding-top:50px;
-        z-index: 2;
+        z-index: 1;
         transition: right 0.5s;
 
     }
@@ -366,6 +365,77 @@ nav .fa-solid{
         flex-basis: 100%;
     }
 }
+
+@media only screen and (max-width: 120px) {
+    #header{
+        background-image: url(images/arkaplanphone.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        margin: 4050px 0;
+        font-size: 60px;
+        color: #fff;
+        -webkit-text-stroke-color: #000000;
+        -webkit-text-stroke-width: 1px;
+    
+    }
+    .header-text h1{
+        font-size:40px;
+        color: #fff;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size:35px;
+    }
+    nav ul{
+        background: #d29a41;
+        position:fixed;
+        top:0;
+        right:-200px;
+        width: 200px;
+        height: 100vh;
+        padding-top:50px;
+        z-index: 1;
+        transition: right 0.5s;
+
+    }
+    nav ul li{
+        display:block;
+        margin:25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor:pointer;
+        font-size: 30px;
+    }
+    .fa-solid{
+        font-size: 35px;
+    }
+    .sub-title{
+        font-size:40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+
+    }
+    .about-col-1{
+        margin-bottom:30px;
+    }
+    .about-col-2{
+        font-size:14px;
+    }
+    .tab-links{
+        font-size:16px;
+        margin-right:20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    
+    
+  }
 #msg{
     color:#61b752;
     margin-top:-10px;
