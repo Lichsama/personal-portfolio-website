@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/79ad43ffe9.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <div id="header">
     <div class="container">
         <nav>
             <img src="images/logo.png" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>               
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>BI STUDENT</p>
@@ -26,5 +29,159 @@
         </div>
     </div>
 </div>
+<!-------aboutmekısmı------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/usr2.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    Hello, I am a 4th year business informatics student at Haliç University.<br><br>
+I continue to improve myself with courses I have taken and projects I have been working on in my software learning journey, which I started while studying at the university. Besides the university education,
+ I personally believe that we all should constantly improve ourselves and build new skills.<br><br>
+Now I am developing myself in C# , Java and HTML/CSS/JS . I am trying to develop small website and  some projects with C# and Java for sharp my skills.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>C# (Intermediate)</span><br>Building Projects using with C#.</li>
+                        <li><span>HTML/CSS/JS (Intermediate)</span><br>Website Developmnet.</li>
+                        <li><span>Python (Beginner)</span><br>Building Projects using with Python.</li>
+                        <li><span>Excel/MatLAB/Tableau (Beginner expect Excel, for excel Intermediate)</span><br>Storing, processing, analyzing, reporting and visualizing digital data.</li>
+                        <li><span>Machine Learning and Artificial Intelligence (Beginner)</span><br>finding patterns and correlations in large data sets using algorithms and making the best decisions based on this analysis.</li>
+                        <li><span>Unity and Unreal Engine (Beginner)</span><br>Building small games using with unity and unreal Engine.</li>
+                        <li><span>Adobe Photoshop (Below Intermediate Level)</span><br>Some graphics design.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>For three months in 2019</span><br>Sales Representative</li>
+                        <li><span>For three months in 2021</span><br>Sales Representative</li>
+                        <li><span>2019-Current</span><br>i dont have no Experience related to my department at university.</li>
+
+
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019-Current</span><br>Halic University</li>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------works--------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.jpg">
+                    <div class="layer">
+                        <h3>C# Apps</h3>
+                        <p>My Projects using with C#,Java (Coming Soon)</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work2.jpg">
+                    <div class="layer">
+                        <h3>Games</h3>
+                        <p>My Projects using with Unity and Unreal Engine (Coming Soon)</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work3.jpg">
+                    <div class="layer">
+                        <h3>Websites Example</h3>
+                        <p>My websites (Coming Soon)</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div> 
+                
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> tufankaankaraarslan@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> +090 542 579 3460</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/CV_tufankaankaraarslan.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" id="Your Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="copyright">
+    <p>Copyright © Kaan. Made by Kaan Karaarslan</p>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+<script>
+    var sidemenu =document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxx0hDbC8J4pQKIdctmliyB8gJFo8WsStC8gVBSKIFjySQ6AMB_GjyAzwX7pnKI6kRH/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {msg.innerHTML = "Thanks for contact!!" 
+        setTimeout(function(){
+            msg.innerHTML=""
+        },5000)
+        form.reset()
+    })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
